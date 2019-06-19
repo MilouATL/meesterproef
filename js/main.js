@@ -1,58 +1,26 @@
 // =========================== //
 // show and hide content       // 
 // =========================== //
-// function showElementToggle() {
-//     var textElement = document.getElementById("showElement");
-    
-//     if (textElement.style.display === "none") {
-//         textElement.style.display = "block";
-//     } else {
-//         textElement.style.display = "none";
-//     }
-//   }
 
 function showElementToggleOne() {
     var textElementOne = document.getElementById("showElementOne");
-    if (textElementOne.style.display === "none") {
-        textElementOne.style.display = "block";
-    } else {
-        textElementOne.style.display = "none";
-    }
+    textElementOne.classList.toggle("show");
   }
-
 
   function showElementToggleTwo() {
     var textElementTwo = document.getElementById("showElementTwo");
-  
-    if (textElementTwo.style.display === "none") {
-        textElementTwo.style.display = "block";
-    } else {
-        textElementTwo.style.display = "none";
-    }
-  }
+    textElementTwo.classList.toggle("show");
+  }  
 
   function showElementToggleThree() {
     var textElementThree = document.getElementById("showElementThree");
-  
-    if (textElementThree.style.display === "none") {
-        textElementThree.style.display = "block";
-    } else {
-        textElementThree.style.display = "none";
-    }
+    textElementThree.classList.toggle("show");
   }
 
   function showElementToggleFour() {
     var textElementFour = document.getElementById("showElementFour");
-  
-    if (textElementFour.style.display === "none") {
-        textElementFour.style.display = "block";
-    } else {
-        textElementFour.style.display = "none";
-    }
+    textElementFour.classList.toggle("show");
   }
-
-
-
 
 //===============================//
 //   svg animation optimization // 
@@ -64,8 +32,6 @@ setInterval(function calculateSvgViewbox(){
       svg[i].setAttribute("viewBox", (bbox.x)+" "+(bbox.y)+" "+(bbox.width)+" "+(bbox.height));
   }
 }, 1)
-
-
 
 // =========================== //
 // logic behind content btns   // 

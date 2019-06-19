@@ -1,2 +1,0 @@
-# meesterproef
-meesterproef minor

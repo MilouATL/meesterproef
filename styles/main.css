@@ -345,12 +345,23 @@ button:hover {
     color: white;
     line-height: 2rem;
     position: absolute;
-    animation: slideInRight 1s forwards;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     height: 79%;
     left: 65%;
     top: 0.5vh;
     right: .3vw;
+    transform: translateX(100%);
+    transition-duration: 1s;
+
+}
+
+
+.introduction-text.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+
 }
 
 .overlay {
@@ -650,15 +661,6 @@ p {
     }
   }
     
-@keyframes slideInRight {
-    0% {
-        transform: translateX(100%);
-        visibility: visible;
-    }
-    100% {
-        transform: translateX(0);
-    }
-} 
     
 @keyframes rubberBand {
     0% {
@@ -834,18 +836,24 @@ p {
     display: none;
     position: relative;
     background-color: white;
-    min-width: 164px;
-    top: 9vh;
+    min-width: 170px;
+    top: 10.1vh;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 11;
   }
   
   .dropdown-content a {
     font-family: 'Source Serif Pro', serif;
-    color: black !important ;
+    color: black !important;
+    text-decoration: none !important;
     font-size: 2rem;
     padding: 12px 16px;
     display: block;
+
+  }
+
+  .dropdown-content a:hover {
+    text-decoration: underline !important;
   }
 
   
